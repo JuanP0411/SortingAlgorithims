@@ -1,0 +1,6 @@
+C:\Users\juanp\source\repos\Algorithims\SortingAlgorithims\bin\Debug\SortingAlgorithims.exe.config
+C:\Users\juanp\source\repos\Algorithims\SortingAlgorithims\bin\Debug\SortingAlgorithims.exe
+C:\Users\juanp\source\repos\Algorithims\SortingAlgorithims\bin\Debug\SortingAlgorithims.pdb
+C:\Users\juanp\source\repos\Algorithims\SortingAlgorithims\obj\Debug\SortingAlgorithims.csprojAssemblyReference.cache
+C:\Users\juanp\source\repos\Algorithims\SortingAlgorithims\obj\Debug\SortingAlgorithims.exe
+C:\Users\juanp\source\repos\Algorithims\SortingAlgorithims\obj\Debug\SortingAlgorithims.pdb
