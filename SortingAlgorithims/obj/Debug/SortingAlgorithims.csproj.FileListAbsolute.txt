@@ -7,6 +7,5 @@ C:\Users\juanp\source\repos\Algorithims\SortingAlgorithims\obj\Debug\SortingAlgo
 C:\Users\Usuario\Documents\C#\SortingAlgorithims\SortingAlgorithims\bin\Debug\SortingAlgorithims.exe.config
 C:\Users\Usuario\Documents\C#\SortingAlgorithims\SortingAlgorithims\bin\Debug\SortingAlgorithims.exe
 C:\Users\Usuario\Documents\C#\SortingAlgorithims\SortingAlgorithims\bin\Debug\SortingAlgorithims.pdb
-C:\Users\Usuario\Documents\C#\SortingAlgorithims\SortingAlgorithims\obj\Debug\SortingAlgorithims.csprojAssemblyReference.cache
 C:\Users\Usuario\Documents\C#\SortingAlgorithims\SortingAlgorithims\obj\Debug\SortingAlgorithims.exe
 C:\Users\Usuario\Documents\C#\SortingAlgorithims\SortingAlgorithims\obj\Debug\SortingAlgorithims.pdb

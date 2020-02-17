@@ -10,6 +10,57 @@ namespace SortingAlgorithims
     {
         public static DateTime reference = DateTime.UtcNow;
 
+        public void AQuickSort(int[] arr, int left, int right)
+        {
+            if (left < right)
+            {
+                int pivot = Partition(arr, left, right);
+
+                if (pivot > 1)
+                {
+                    AQuickSort(arr, left, pivot - 1);
+                }
+                if (pivot + 1 < right)
+                {
+                    AQuickSort(arr, pivot + 1, right);
+                }
+            }
+
+        }
+
+        private static int Partition(int[] arr, int left, int right)
+        {
+            int pivot = arr[left];
+            while (true)
+            {
+
+                while (arr[left] < pivot)
+                {
+                    left++;
+                }
+
+                while (arr[right] > pivot)
+                {
+                    right--;
+                }
+
+                if (left < right)
+                {
+                    if (arr[left] == arr[right]) return right;
+
+                    int temp = arr[left];
+                    arr[left] = arr[right];
+                    arr[right] = temp;
+
+
+                }
+                else
+                {
+                    return right;
+                }
+            }
+        }
+
         public static void heapSort(int[] arr)
         {
             int n = arr.Length;
@@ -41,63 +92,79 @@ namespace SortingAlgorithims
             }
         }
 
-        public static void main(String[] args)
+        public static void Main(String[] args)
         {
+            String file = "C:/Users/Usuario/Desktop/xx.csv";
             int[] arr = null;
+            String line = "";
+            System.IO.StreamWriter wr;
+            wr = new System.IO.StreamWriter(file);
 
-            //Length 10 random
-            reference = DateTime.UtcNow;
-            arr = fillArrayRandom(10);
-            HeapSort.heapSort(arr);
-            Console.WriteLine(Time());
+            wr.WriteLine("10R,1000R,100000R,10A,1000A,100000A,10D,1000D,100000D");
 
-            //Length 1000 random
-            reference = DateTime.UtcNow;
-            arr = fillArrayRandom(1000);
-            HeapSort.heapSort(arr);
-            Console.WriteLine(Time());
+            for (int i=0; i<1000; i++)
+            {
+                line = "";
 
-            //Length 100000 random
-            reference = DateTime.UtcNow;
-            arr = fillArrayRandom(100000);
-            HeapSort.heapSort(arr);
-            Console.WriteLine(Time());
+                //Length 10 random
+                reference = DateTime.UtcNow;
+                arr = fillArrayRandom(10);
+                HeapSort.heapSort(arr);;
+                line += Time();
 
-            //Length 10 ascending
-            reference = DateTime.UtcNow;
-            arr = fillArrayAcending(10);
-            HeapSort.heapSort(arr);
-            Console.WriteLine(Time());
+                //Length 1000 random
+                reference = DateTime.UtcNow;
+                arr = fillArrayRandom(1000);
+                HeapSort.heapSort(arr);
+                line += "," + Time();
 
-            //Length 1000 ascending
-            reference = DateTime.UtcNow;
-            arr = fillArrayAcending(1000);
-            HeapSort.heapSort(arr);
-            Console.WriteLine(Time());
+                //Length 100000 random
+                reference = DateTime.UtcNow;
+                arr = fillArrayRandom(100000);
+                HeapSort.heapSort(arr);
+                line += "," + Time();
 
-            //Length 100000 ascending
-            reference = DateTime.UtcNow;
-            arr = fillArrayAcending(100000);
-            HeapSort.heapSort(arr);
-            Console.WriteLine(Time());
+                //Length 10 ascending
+                reference = DateTime.UtcNow;
+                arr = fillArrayAcending(10);
+                HeapSort.heapSort(arr);
+                line += "," + Time();
 
-            //Length 10 descending
-            reference = DateTime.UtcNow;
-            arr = fillArrayDecending(10);
-            HeapSort.heapSort(arr);
-            Console.WriteLine(Time());
+                //Length 1000 ascending
+                reference = DateTime.UtcNow;
+                arr = fillArrayAcending(1000);
+                HeapSort.heapSort(arr);
+                line += "," + Time();
 
-            //Length 1000 descending
-            reference = DateTime.UtcNow;
-            arr = fillArrayDecending(1000);
-            HeapSort.heapSort(arr);
-            Console.WriteLine(Time());
+                //Length 100000 ascending
+                reference = DateTime.UtcNow;
+                arr = fillArrayAcending(100000);
+                HeapSort.heapSort(arr);
+                line += "," + Time();
 
-            //Length 100000 descending
-            reference = DateTime.UtcNow;
-            arr = fillArrayDecending(100000);
-            HeapSort.heapSort(arr);
-            Console.WriteLine(Time());
+                //Length 10 descending
+                reference = DateTime.UtcNow;
+                arr = fillArrayDecending(10);
+                HeapSort.heapSort(arr);
+                line += "," + Time();
+
+                //Length 1000 descending
+                reference = DateTime.UtcNow;
+                arr = fillArrayDecending(1000);
+                HeapSort.heapSort(arr);
+                line += "," + Time();
+
+                //Length 100000 descending
+                reference = DateTime.UtcNow;
+                arr = fillArrayDecending(100000);
+                HeapSort.heapSort(arr);
+                line += "," + Time();
+
+                Console.WriteLine(line);
+                wr.WriteLine(line);
+            }
+
+            wr.Close();
 
         }
 
@@ -126,7 +193,7 @@ namespace SortingAlgorithims
             for (int c = 0; c < array.Length; c++)
             {
                 array[c] = c;
-                Console.WriteLine(array[c]);
+                //Console.WriteLine(array[c]);
             }
             return array;
         }
@@ -138,7 +205,7 @@ namespace SortingAlgorithims
             for (int c = array.Length - 1; c <= 0; c--)
             {
                 array[c] = c;
-                Console.WriteLine(array[c]);
+                //Console.WriteLine(array[c]);
             }
             return array;
         }
