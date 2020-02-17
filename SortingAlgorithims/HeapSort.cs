@@ -94,8 +94,8 @@ namespace SortingAlgorithims
 
         public static void Main(String[] args)
         {
-            String filex = "C:/Users/Usuario/Desktop/xx.csv";
-            String filez = "C:/Users/Usuario/Desktop/zz.csv";
+            String filex = "C:/Users/1006108728/Desktop/xx.csv";
+            String filez = "C:/Users/1006108728/Desktop/zz.csv";
             int[] arr = null;
             String line = "";
             System.IO.StreamWriter wr;
@@ -105,7 +105,7 @@ namespace SortingAlgorithims
 
             wr.WriteLine("10R,1000R,100000R,10A,1000A,100000A,10D,1000D,100000D");
             wrt.WriteLine("10R,1000R,100000R,10A,1000A,100000A,10D,1000D,100000D");
-
+            
             for (int i = 0; i < 1000; i++)
             {
                 line = "";

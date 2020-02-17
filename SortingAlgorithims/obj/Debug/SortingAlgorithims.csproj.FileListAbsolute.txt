@@ -10,3 +10,9 @@ C:\Users\Usuario\Documents\C#\SortingAlgorithims\SortingAlgorithims\bin\Debug\So
 C:\Users\Usuario\Documents\C#\SortingAlgorithims\SortingAlgorithims\obj\Debug\SortingAlgorithims.exe
 C:\Users\Usuario\Documents\C#\SortingAlgorithims\SortingAlgorithims\obj\Debug\SortingAlgorithims.pdb
 C:\Users\Usuario\Documents\C#\SortingAlgorithims\SortingAlgorithims\obj\Debug\SortingAlgorithims.csprojAssemblyReference.cache
+C:\Users\1006108728\Source\Repos\SortingAlgorithims\SortingAlgorithims\bin\Debug\SortingAlgorithims.exe.config
+C:\Users\1006108728\Source\Repos\SortingAlgorithims\SortingAlgorithims\bin\Debug\SortingAlgorithims.exe
+C:\Users\1006108728\Source\Repos\SortingAlgorithims\SortingAlgorithims\bin\Debug\SortingAlgorithims.pdb
+C:\Users\1006108728\Source\Repos\SortingAlgorithims\SortingAlgorithims\obj\Debug\SortingAlgorithims.csprojAssemblyReference.cache
+C:\Users\1006108728\Source\Repos\SortingAlgorithims\SortingAlgorithims\obj\Debug\SortingAlgorithims.exe
+C:\Users\1006108728\Source\Repos\SortingAlgorithims\SortingAlgorithims\obj\Debug\SortingAlgorithims.pdb
