@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SortingAlgorithims;
 namespace SortingTest
@@ -8,15 +9,20 @@ namespace SortingTest
     {
 
         private HeapSort Experiment;
+        
         public int[] fillArrayRandom(int length)
         {
+            List<int> listNumbers = new List<int>();
             int[] array = new int[length];
             Random rnd = new Random();
             for (int c = 0; c < array.Length; c++)
             {
-
-                array[c] = rnd.Next(1, 100);
-                Console.WriteLine(array[c]);
+               int random = rnd.Next(1, 100);
+                if (!listNumbers.Contains(random)){
+                    array[c] = random;
+                    listNumbers.Add(random);
+                }
+               
             }
             return array;
         }

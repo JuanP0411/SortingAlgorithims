@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SortingAlgorithims;
 
@@ -10,16 +11,24 @@ namespace SortingTest
 
         private QuickSort Experiment;
         
-    
+    //Este es el de quicksort
        public int[] fillArrayRandom(int length)
         {
+            List<int> listNumbers = new List<int>();
             int[] array = new int [length];
             Random rnd = new Random();
-            for (int c = 0; c < array.Length; c++)
+            int c = 0;
+            while (c<array.Length)
             {
 
-                array[c] = rnd.Next(1,100);
-                Console.WriteLine(array[c]);
+                int random = rnd.Next(1, 100000000);
+                if (!listNumbers.Contains(random))
+                {
+                    array[c] = random;
+                    listNumbers.Add(random);
+                    c++;
+                }
+
             }
             return array;
         }
@@ -31,7 +40,7 @@ namespace SortingTest
             for (int c = 0; c < array.Length; c++)
             {
                 array[c] = c;
-                Console.WriteLine(array[c]);
+               
             }
             return array;
         }
@@ -42,7 +51,7 @@ namespace SortingTest
             for (int c = array.Length-1; c <=0 ; c--)
             {
                 array[c] = c;
-                Console.WriteLine(array[c]);
+               
             }
             return array;
         }
@@ -160,7 +169,7 @@ namespace SortingTest
         {
             Experiment = new QuickSort();
             int[] arr = fillArrayDecending(10);
-            Experiment.AQuickSort(arr, 0, arr.Length - 1);
+            Experiment.AQuickSort(arr, 0, 9);
 
             for (int i = 0; i < arr.Length - 1; i++)
             {
