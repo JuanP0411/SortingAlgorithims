@@ -58,7 +58,7 @@ namespace SortingTest
 
             Experiment = new HeapSort();
             int[] arr = fillArrayRandom(10);
-            Experiment.heapSort(arr);
+            HeapSort.heapSort(arr);
 
             for (int i = 0; i < arr.Length - 1; i++)
             {
@@ -77,7 +77,7 @@ namespace SortingTest
 
             Experiment = new HeapSort();
             int[] arr = fillArrayRandom(1000);
-            Experiment.heapSort(arr);
+            HeapSort.heapSort(arr);
 
             for (int i = 0; i < arr.Length - 1; i++)
             {
@@ -95,7 +95,7 @@ namespace SortingTest
         {
                 Experiment = new HeapSort();
                 int[] arr = fillArrayRandom(100000);
-                Experiment.heapSort(arr);
+                HeapSort.heapSort(arr);
 
                 for (int i = 0; i < arr.Length - 1; i++)
                 {
@@ -113,7 +113,7 @@ namespace SortingTest
         {
             Experiment = new HeapSort();
             int[] arr = fillArrayAcending(10);
-            Experiment.heapSort(arr);
+            HeapSort.heapSort(arr);
 
             for (int i = 0; i < arr.Length - 1; i++)
             {
@@ -131,7 +131,7 @@ namespace SortingTest
         {
             Experiment = new HeapSort();
             int[] arr = fillArrayAcending(1000);
-            Experiment.heapSort(arr);
+            HeapSort.heapSort(arr);
 
             for (int i = 0; i < arr.Length - 1; i++)
             {
@@ -149,7 +149,7 @@ namespace SortingTest
         {
             Experiment = new HeapSort();
             int[] arr = fillArrayAcending(100000);
-            Experiment.heapSort(arr);
+            HeapSort.heapSort(arr);
 
             for (int i = 0; i < arr.Length - 1; i++)
             {
@@ -167,7 +167,7 @@ namespace SortingTest
         {
             Experiment = new HeapSort();
             int[] arr = fillArrayDecending(10);
-            Experiment.heapSort(arr);
+            HeapSort.heapSort(arr);
 
             for (int i = 0; i < arr.Length - 1; i++)
             {
@@ -185,7 +185,7 @@ namespace SortingTest
         {
             Experiment = new HeapSort();
             int[] arr = fillArrayDecending(1000);
-            Experiment.heapSort(arr);
+            HeapSort.heapSort(arr);
 
             for (int i = 0; i < arr.Length - 1; i++)
             {
@@ -203,7 +203,7 @@ namespace SortingTest
         {
             Experiment = new HeapSort();
             int[] arr = fillArrayDecending(100000);
-            Experiment.heapSort(arr);
+            HeapSort.heapSort(arr);
 
             for (int i = 0; i < arr.Length - 1; i++)
             {
