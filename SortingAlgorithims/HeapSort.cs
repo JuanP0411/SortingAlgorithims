@@ -10,7 +10,7 @@ namespace SortingAlgorithims
     {
         public static DateTime reference = DateTime.UtcNow;
 
-        public void AQuickSort(int[] arr, int left, int right)
+        public static void AQuickSort(int[] arr, int left, int right)
         {
             if (left < right)
             {
@@ -94,13 +94,81 @@ namespace SortingAlgorithims
 
         public static void Main(String[] args)
         {
-            String file = "C:/Users/Usuario/Desktop/xx.csv";
+            String filex = "C:/Users/Usuario/Desktop/xx.csv";
+            String filez = "C:/Users/Usuario/Desktop/zz.csv";
             int[] arr = null;
             String line = "";
             System.IO.StreamWriter wr;
-            wr = new System.IO.StreamWriter(file);
+            wr = new System.IO.StreamWriter(filex);
+            System.IO.StreamWriter wrt;
+            wrt = new System.IO.StreamWriter(filez);
 
             wr.WriteLine("10R,1000R,100000R,10A,1000A,100000A,10D,1000D,100000D");
+            wrt.WriteLine("10R,1000R,100000R,10A,1000A,100000A,10D,1000D,100000D");
+
+            for (int i = 0; i < 1000; i++)
+            {
+                line = "";
+
+                //Length 10 random
+                reference = DateTime.UtcNow;
+                arr = fillArrayRandomQuick(10);
+                AQuickSort(arr, 0, arr.Length - 1);
+                line += Time();
+
+                //Length 1000 random
+                reference = DateTime.UtcNow;
+                arr = fillArrayRandomQuick(1000);
+                AQuickSort(arr, 0, arr.Length - 1);
+                line += "," + Time();
+
+                //Length 100000 random
+                reference = DateTime.UtcNow;
+                arr = fillArrayRandomQuick(100000);
+                AQuickSort(arr, 0, arr.Length - 1);
+                line += "," + Time();
+
+                //Length 10 ascending
+                reference = DateTime.UtcNow;
+                arr = fillArrayAcending(10);
+                AQuickSort(arr, 0, arr.Length - 1);
+                line += "," + Time();
+
+                //Length 1000 ascending
+                reference = DateTime.UtcNow;
+                arr = fillArrayAcending(1000);
+                AQuickSort(arr, 0, arr.Length - 1);
+                line += "," + Time();
+
+                //Length 100000 ascending
+                reference = DateTime.UtcNow;
+                arr = fillArrayAcending(100000);
+                AQuickSort(arr, 0, arr.Length - 1);
+                line += "," + Time();
+
+                //Length 10 descending
+                reference = DateTime.UtcNow;
+                arr = fillArrayDecending(10);
+                AQuickSort(arr, 0, arr.Length - 1);
+                line += "," + Time();
+
+                //Length 1000 descending
+                reference = DateTime.UtcNow;
+                arr = fillArrayDecending(1000);
+                AQuickSort(arr, 0, arr.Length - 1);
+                line += "," + Time();
+
+                //Length 100000 descending
+                reference = DateTime.UtcNow;
+                arr = fillArrayDecending(100000);
+                AQuickSort(arr, 0, arr.Length - 1);
+                line += "," + Time();
+
+                Console.WriteLine(line);
+                wrt.WriteLine(line);
+            }
+
+            wrt.Close();
 
             for (int i=0; i<1000; i++)
             {
@@ -109,55 +177,55 @@ namespace SortingAlgorithims
                 //Length 10 random
                 reference = DateTime.UtcNow;
                 arr = fillArrayRandom(10);
-                HeapSort.heapSort(arr);;
+                heapSort(arr);;
                 line += Time();
 
                 //Length 1000 random
                 reference = DateTime.UtcNow;
                 arr = fillArrayRandom(1000);
-                HeapSort.heapSort(arr);
+                heapSort(arr);
                 line += "," + Time();
 
                 //Length 100000 random
                 reference = DateTime.UtcNow;
                 arr = fillArrayRandom(100000);
-                HeapSort.heapSort(arr);
+                heapSort(arr);
                 line += "," + Time();
 
                 //Length 10 ascending
                 reference = DateTime.UtcNow;
                 arr = fillArrayAcending(10);
-                HeapSort.heapSort(arr);
+                heapSort(arr);
                 line += "," + Time();
 
                 //Length 1000 ascending
                 reference = DateTime.UtcNow;
                 arr = fillArrayAcending(1000);
-                HeapSort.heapSort(arr);
+                heapSort(arr);
                 line += "," + Time();
 
                 //Length 100000 ascending
                 reference = DateTime.UtcNow;
                 arr = fillArrayAcending(100000);
-                HeapSort.heapSort(arr);
+                heapSort(arr);
                 line += "," + Time();
 
                 //Length 10 descending
                 reference = DateTime.UtcNow;
                 arr = fillArrayDecending(10);
-                HeapSort.heapSort(arr);
+                heapSort(arr);
                 line += "," + Time();
 
                 //Length 1000 descending
                 reference = DateTime.UtcNow;
                 arr = fillArrayDecending(1000);
-                HeapSort.heapSort(arr);
+                heapSort(arr);
                 line += "," + Time();
 
                 //Length 100000 descending
                 reference = DateTime.UtcNow;
                 arr = fillArrayDecending(100000);
-                HeapSort.heapSort(arr);
+                heapSort(arr);
                 line += "," + Time();
 
                 Console.WriteLine(line);
@@ -206,6 +274,27 @@ namespace SortingAlgorithims
             {
                 array[c] = c;
                 //Console.WriteLine(array[c]);
+            }
+            return array;
+        }
+
+        public static int[] fillArrayRandomQuick(int length)
+        {
+            List<int> listNumbers = new List<int>();
+            int[] array = new int[length];
+            Random rnd = new Random();
+            int c = 0;
+            while (c < array.Length)
+            {
+
+                int random = rnd.Next(1, 100000000);
+                if (!listNumbers.Contains(random))
+                {
+                    array[c] = random;
+                    listNumbers.Add(random);
+                    c++;
+                }
+
             }
             return array;
         }
